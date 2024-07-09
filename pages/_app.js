@@ -1,8 +1,8 @@
-import GlobalStyle from "../styles";
+import GlobalStyle from "@/styles";
+import Layout from "@/components/Layout";
 import useSWR from "swr";
 
 export default function App({ Component, pageProps }) {
-  // console.log("hi from app js");
   const URL = "https://example-apis.vercel.app/api/art";
 
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -32,7 +32,6 @@ export default function App({ Component, pageProps }) {
   }
 
   const pieces = data && data.map((piece) => remodelData.call(piece));
-  // console.log("pieces from app.js", pieces);
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
@@ -40,7 +39,9 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} pieces={pieces} />
+      <Layout>
+        <Component {...pageProps} pieces={pieces} />
+      </Layout>
     </>
   );
 }
