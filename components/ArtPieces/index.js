@@ -1,4 +1,5 @@
-import ArtPiecePreview from "./ArtPiecePreview";
+import ArtPiecePreview from "@/components/ArtPiecePreview";
+
 export default function ArtPieces({ pieces }) {
   return (
     <section>
