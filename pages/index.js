@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import ArtPieces from "@/components/ArtPieces";
+import Spotlight from "@/components/Spotlight";
 
 export default function HomePage() {
   const URL = "https://example-apis.vercel.app/api/art";
@@ -13,7 +14,8 @@ export default function HomePage() {
   return (
     <>
       <h1>{"Art Gallery".toUpperCase()}</h1>
-      <ArtPieces pieces={pieces}></ArtPieces>
+      <Spotlight pieces={pieces} />
+      <ArtPieces pieces={pieces} />
     </>
   );
 }
