@@ -1,5 +1,5 @@
 import Image from "next/image";
-import getRandomArrayElement from "@/utils/getRandomArrayElement.js";
+import getRandomArrayElement from "@/utils/getRandomArrayElement";
 
 export default function Spotlight({ pieces }) {
   const {
