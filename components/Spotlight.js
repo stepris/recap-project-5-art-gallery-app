@@ -2,11 +2,7 @@ import Image from "next/image";
 import getRandomArrayElement from "@/utils/getRandomArrayElement";
 
 export default function Spotlight({ pieces }) {
-  const {
-    imageSource: image,
-    artist,
-    name: title,
-  } = getRandomArrayElement(pieces);
+  const { image, artist, title } = getRandomArrayElement(pieces);
 
   return (
     <article>

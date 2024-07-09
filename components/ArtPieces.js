@@ -1,17 +1,11 @@
-import ArtPiecesPreview from "./ArtPiecesPreview";
+import ArtPiecePreview from "./ArtPiecePreview";
 export default function ArtPieces({ pieces }) {
   return (
     <section>
       <ul>
         {pieces.map((piece) => {
-          return (
-            <ArtPiecesPreview
-              key={piece.slug}
-              image={piece.imageSource}
-              title={piece.name}
-              artist={piece.artist}
-            />
-          );
+          const { slug } = piece;
+          return <ArtPiecePreview key={slug} {...piece} />;
         })}
       </ul>
     </section>
