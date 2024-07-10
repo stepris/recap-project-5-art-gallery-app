@@ -10,9 +10,7 @@ export default function ArtPieceDetails({ image, title, artist, year, genre }) {
       </p>
       <p>Year: {year}</p>
       <p>Genre: {genre}</p>
-      <Link href="/art-pieces">
-        <button type="button">Back</button>
-      </Link>
+      <Link href="/art-pieces">Back</Link>
     </>
   );
 }
