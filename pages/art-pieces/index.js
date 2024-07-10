@@ -1,9 +1,9 @@
 import ArtPieces from "@/components/ArtPieces";
 
-export default function OverviewPage({ pieces }) {
+export default function OverviewPage({ pieces, artPiecesInfoObject }) {
   return (
     <>
-      <ArtPieces pieces={pieces} />
+      <ArtPieces pieces={pieces} artPiecesInfoObject={artPiecesInfoObject} />
     </>
   );
 }
